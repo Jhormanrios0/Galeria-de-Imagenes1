@@ -1,44 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeria de Imagenes</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="./js/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LightGallery with TailwindCSS</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/css/lightgallery.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/lightgallery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/plugins/zoom/lg-zoom.min.js"></script>
 </head>
 
-<body class="bg-blue-100">
-  <div id="fulImgBox" class="fixed inset-0 bg-black bg-opacity-90 hidden flex items-center justify-center z-50">
-    <img id="fulImg" src="" class="max-w-full max-h-full" alt="Full Image">
-    <span onclick="closeImg()" class="absolute top-5 right-5 text-white text-2xl cursor-pointer">X</span>
-    <button id="prevImg" class="absolute left-5 text-white text-2xl cursor-pointer">&lt;</button>
-    <button id="nextImg" class="absolute right-5 text-white text-2xl cursor-pointer">&gt;</button>
-  </div>
+<body class="bg-gray-100 p-8">
+  <main class="container max-w-7xl mx-auto mt-20">
 
-  <h1 class="text-center relative w-4/5 mx-auto my-12">
-    <span class="bg-blue-100 px-4">Image Gallery</span>
+  </main>
 
-    <div class="w-full h-0.5 bg-black"></div>
-    </div>
-  </h1>
-
-  <div id="imgGallery"
-    class="img-gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-4/5 mx-auto my-12">
-
-  </div>
-
-  <div class="flex justify-center my-8">
-    <button onclick="prevPage()"
-      class="bg-indigo-500 rounded-md text-base hover:rounded-lg hover:text-lg transition-all duration-300 ease-in-out hover:bg-indigo-800 font-normal hover:font-bold text-white px-4 py-2 mx-2">Anterior</button>
-    <button onclick="nextPage()"
-      class="bg-indigo-500 rounded-md text-base hover:rounded-lg hover:text-lg transition-all duration-300 ease-in-out hover:bg-indigo-800 font-normal hover:font-bold  text-white px-4 py-2 mx-2">Siguiente</button>
-  </div>
-
+  <script>
+   
+  </script>
 </body>
 
 </html>
