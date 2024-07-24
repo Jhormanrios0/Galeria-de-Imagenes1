@@ -4,21 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LightGallery with TailwindCSS</title>
+  <title>galeria de imagenes</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/css/lightgallery.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/lightgallery.min.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/plugins/zoom/lg-zoom.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body class="bg-gray-100 p-8">
-  <main class="container max-w-7xl mx-auto mt-20">
+  <header class="container max-w-7xl mx-auto  ">
+    <h2 class="flex items-center justify-center">
+      Galeria de imagenes
+    </h2>
+  </header>
 
+  <main class="container max-w-7xl mx-auto mt-20">
+    <div id="gallery" class="grid grid-cols-4 gap-4"></div>
+    <div class="flex justify-center mt-4">
+      <button id="prev" class="px-4 py-2 m-1 bg-indigo-600 text-white rounded"><i
+          class="fa-solid fa-caret-left"></i></button>
+      <button id="next" class="px-4 py-2 m-1 bg-indigo-600 text-white rounded"><i
+          class="fa-solid fa-caret-right"></i></button>
+    </div>
   </main>
 
-  <script src="./js/main.js"></script>
+
+  <script src="./js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 </body>
 
 </html>
