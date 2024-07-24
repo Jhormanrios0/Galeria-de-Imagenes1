@@ -3,7 +3,9 @@
 tailwind.config = {
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        principalColor: "#1c92d2",
+      },
       height: {
         400: "400px",
         cardsHeight: "270px",

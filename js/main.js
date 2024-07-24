@@ -36,9 +36,7 @@ function displayGallery(page) {
     figure.className = "gallery_item";
     figure.innerHTML = `
       <a href="${src}" data-fancybox="gallery">
-        <img class="w-full h-60 object-cover rounded-lg transition-transform transform border-4 border-transparent hover:border-indigo-600 hover:scale-105" src="${src}" alt="${src
-      .split("/")
-      .pop()}">
+        <img class="gallery-image" src="${src}" alt="${src.split("/").pop()}">
       </a>
     `;
     gallery.appendChild(figure);
@@ -49,6 +47,8 @@ function updateButtons() {
   document.getElementById("prev").disabled = currentPage === 1;
   document.getElementById("next").disabled =
     currentPage === Math.ceil(images.length / itemsPerPage);
+  
+  document.getElementById("pagination-info").innerText = `Página ${currentPage} de ${Math.ceil(images.length / itemsPerPage)}`;
 }
 
 document.getElementById("prev").addEventListener("click", () => {
