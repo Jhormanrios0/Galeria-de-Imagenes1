@@ -8,5 +8,5 @@ const gallery1Images = [
   "./assets/image_7.jpg",
   "./assets/image_8.jpg",
   "./assets/image_9.jpg",
-
+  "./assets/galeria_2/prueba1.JPG",
 ];
