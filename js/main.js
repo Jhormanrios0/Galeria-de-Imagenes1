@@ -81,11 +81,5 @@ document.getElementById("next").addEventListener("click", () => {
   }
 });
 
-// Inicializar la galería
-displayGallery(currentPage);
-updateButtons();
-
-// Inicializar Fancybox al cargar la página
-Fancybox.bind("[data-fancybox]", {
-  // Tus opciones personalizadas
-});
+// Inicializar la galería por defecto al cargar la página
+loadGallery(currentGallery);
