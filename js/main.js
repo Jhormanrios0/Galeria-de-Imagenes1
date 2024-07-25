@@ -1,31 +1,12 @@
-const images = [
-  "./assets/image_1.jpg",
-  "./assets/image_2.jpg",
-  "./assets/image_3.jpg",
-  "./assets/image_4.jpg",
-  "./assets/image_5.jpg",
-  "./assets/image_6.jpg",
-  "./assets/image_7.jpg",
-  "./assets/image_8.jpg",
-  "./assets/image_9.jpg",
-  "./assets/image_10.jpg",
-  "./assets/image_11.jpg",
-  "./assets/image_12.jpg",
-  "./assets/image_13.jpg",
-  "./assets/image_14.jpg",
-  "./assets/image_15.jpg",
-  "./assets/image_16.jpg",
-  "./assets/image_17.jpg",
-  "./assets/image_18.jpg",
-  "./assets/image_19.jpg",
-];
-
 const itemsPerPage = 8;
 let currentPage = 1;
+let currentGallery = "gallery1";
 
 function displayGallery(page) {
   const gallery = document.getElementById("gallery");
   gallery.innerHTML = "";
+
+  let images = getGalleryImages(currentGallery);
 
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -41,14 +22,44 @@ function displayGallery(page) {
     `;
     gallery.appendChild(figure);
   });
+
+  // Vuelve a inicializar Fancybox después de agregar los elementos
+  Fancybox.bind("[data-fancybox]", {
+    // Tus opciones personalizadas
+  });
 }
 
 function updateButtons() {
+  const images = getGalleryImages(currentGallery);
   document.getElementById("prev").disabled = currentPage === 1;
   document.getElementById("next").disabled =
     currentPage === Math.ceil(images.length / itemsPerPage);
-  
-  document.getElementById("pagination-info").innerText = `Página ${currentPage} de ${Math.ceil(images.length / itemsPerPage)}`;
+
+  document.getElementById(
+    "pagination-info"
+  ).innerText = `Página ${currentPage} de ${Math.ceil(
+    images.length / itemsPerPage
+  )}`;
+}
+
+function loadGallery(galleryName) {
+  currentGallery = galleryName;
+  currentPage = 1;
+  displayGallery(currentPage);
+  updateButtons();
+}
+
+function getGalleryImages(galleryName) {
+  switch (galleryName) {
+    case "gallery1":
+      return gallery1Images;
+    case "gallery2":
+      return gallery2Images;
+    case "gallery3":
+      return gallery3Images;
+    default:
+      return [];
+  }
 }
 
 document.getElementById("prev").addEventListener("click", () => {
@@ -60,7 +71,10 @@ document.getElementById("prev").addEventListener("click", () => {
 });
 
 document.getElementById("next").addEventListener("click", () => {
-  if (currentPage < Math.ceil(images.length / itemsPerPage)) {
+  if (
+    currentPage <
+    Math.ceil(getGalleryImages(currentGallery).length / itemsPerPage)
+  ) {
     currentPage++;
     displayGallery(currentPage);
     updateButtons();
@@ -71,6 +85,7 @@ document.getElementById("next").addEventListener("click", () => {
 displayGallery(currentPage);
 updateButtons();
 
+// Inicializar Fancybox al cargar la página
 Fancybox.bind("[data-fancybox]", {
-  // Your custom options
+  // Tus opciones personalizadas
 });

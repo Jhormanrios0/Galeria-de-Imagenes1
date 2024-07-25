@@ -4,42 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>galeria de imagenes</title>
+  <title>Galería de Imágenes</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/style.css">
-
 </head>
 
 <body class="p-8">
-  <header class="container max-w-7xl mx-auto  ">
-    <h2 class="flex items-center justify-center titulo">
-      Galeria de imagenes
-    </h2>
+  <header class="container max-w-7xl mx-auto">
+    <h2 class="flex items-center justify-center titulo">Galería de Imágenes</h2>
   </header>
-
   <main class="container max-w-7xl mx-auto mt-20">
-    <!-- Botones Galerias -->
+    <!-- Botones Galerías -->
     <section class="p-2 mx-auto gap-3">
-      <button class="btn-3">
-        <i class="fa-solid fa-meteor"></i> Galeria 1
+      <button class="btn-3" onclick="loadGallery('gallery1')">
+        <i class="fa-solid fa-star-of-david"></i> Galería 1
       </button>
-      <button class="btn-3">
-        <i class="fa-solid fa-masks-theater"></i> <span>Galeria 2</span>
+      <button class="btn-3" onclick="loadGallery('gallery2')">
+        <i class="fa-solid fa-star-half-stroke"></i> <span>Galería 2</span>
       </button>
-      <button class="btn-3">
-        <i class="fa-brands fa-themeisle"></i> Galeria 3
+      <button class="btn-3" onclick="loadGallery('gallery3')">
+        <i class="fa-solid fa-spider"></i> Galería 3
       </button>
     </section>
-    <!-- End Botones Galerias -->
-
+    <!-- End Botones Galerías -->
     <article>
-      <div id="gallery" class="grid grid-cols-4 gap-4 bg-black p-2 rounded-lg bg-opacity-50"></div>
+      <div id="gallery" class="grid grid-cols-4 gap-4 bg-black p-2 rounded-lg bg-opacity-40"></div>
       <div class="inline-flex justify-center gap-1 mt-1 mx-auto containerPaginator">
-        <button id="prev" class="txtPaginator" disabled="">
+        <button id="prev" class="txtPaginator" disabled>
           <i class="fa-solid fa-caret-left"></i>
         </button>
         <div id="pagination-info" class="txtPaginator cursor-not-allowed">Página 1 de 3</div>
@@ -49,11 +44,11 @@
       </div>
     </article>
   </main>
-
-
-
-  <script src="./js/main.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/gallery1.js" defer></script>
+  <script src="./js/gallery2.js" defer></script>
+  <script src="./js/gallery3.js" defer></script>
 </body>
 
 </html>
